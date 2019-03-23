@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <input type="text" name="calculator" value="">
+        <br><hr>
+        <button onclick="addNum('1')">1</button>
+        <button onclick="addNum('2')">2</button>
+        <button onclick="addNum('3')">3</button>
+        <button onclick="addNum('4')">4</button>
+        <button onclick="addNum('5')">5</button>
+        <button onclick="addNum('6')">6</button>
+        <button onclick="addNum('7')">7</button>
+        <button onclick="addNum('8')">8</button>
+        <button onclick="addNum('9')">9</button>
+        <button onclick="addNum('0')">0</button>
+        <br>
+        <button onclick="addFun('+')">+</button>
+        <button onclick="addFun('-')">-</button>
+        <button onclick="addFun('*')">*</button>
+        <button onclick="addFun('/')">/</button>
+        <br>
+        <button onclick="calcTotal()">=</button>
+        <button onclick="clearTotal()">AC</button>
+        <script type="text/javascript">
+            var result = document.getElementsByName("result")[0];
+            
+            var calculator = document.getElementsByName("calculator")[0];
+      
+            function addNum(num) {
+                calculator.value = calculator.value + num;
+            }
+            function addFun(fun) {
+                calculator.value = calculator.value + fun;
+            }
+            function calcTotal() {
+                calculator.value = eval(calculator.value);
+            }
+            function clearTotal() {
+                calculator.value = " ";
+            }
+
+        </script>
+    </body>
+</html>

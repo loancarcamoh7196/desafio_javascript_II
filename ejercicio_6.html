@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title></title>
+  </head>
+  <body>
+
+    <h4>arreglo = [ 1, 'dos', 'tres', 4, 5, 6, 'siete', 8, 9, 'diez']</h4>
+
+    <button onclick="sortList()">Clasificar Arreglo</button>
+
+    <ul id="par">
+      <strong>Pares</strong>
+    </ul>
+
+    <ul id="impar">
+      <strong>Impares</strong>
+    </ul>
+
+    <ul id="string">
+      <strong>Strings</strong>
+    </ul>
+
+    <script>
+      var arr = [1,'dos','tres',4,5,6,'siete',8,9,'diez'];
+      function sortList() { 
+      for (var i = 0; i < arr.length; i++){
+        var item = document.createElement('li');
+        var content = document.createTextNode(arr[i]);
+        item.appendChild(content);
+          if (typeof(arr[i]) == 'number') {
+            if (arr[i] % 2 == 0){
+              listpar = document.getElementById('par');
+              listpar.appendChild(item);
+            } else {
+              listimpar = document.getElementById('impar');
+              listimpar.appendChild(item);
+            }
+          } else {
+              liststring = document.getElementById('string');
+              liststring.appendChild(item);
+          }
+        }
+      }
+    </script>
+
+  </body>
+</html>
